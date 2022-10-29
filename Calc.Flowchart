@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-29T12:43:41.061Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="u0JWE56igDWZKeMlT-vB" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-29T12:43:49.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="1Y1iV5xjkYe6Q5oLbkkw" version="20.5.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="782" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="開始" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="310" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="HI62O5L8eH8vU-ZO1QCL-0" value="ユーザ）数字と演算子を入力" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="HI62O5L8eH8vU-ZO1QCL-0" value="ユーザ）数字と&lt;br&gt;演算子を入力" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="310" y="110" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="HI62O5L8eH8vU-ZO1QCL-2" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; line-height: 0.8;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;1文字目&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: initial;&quot;&gt;が空白である&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;align=center;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
