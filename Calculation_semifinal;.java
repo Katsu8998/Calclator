@@ -77,7 +77,7 @@ public class Main {
 			}
 
 			// 演算子に優先順位をつけ、計算処理を行う
-			// +,- がarray[1]、×,÷,%,^,+,-がarray[3]にある場合、FILOで処理
+			//×,÷,%,^,+は+,-より先に計算を行う
 			int calc;
 			int ans;
 			int interAns;
@@ -85,7 +85,8 @@ public class Main {
 
 			// String[] ops = { "+", "-", "*", "/", "%", "^", "r" };
 			
-			// 初めの演算子が+、次の演算子が*の場合の処理
+			//初めの演算子が+
+			//次の演算子が*の場合の処理
 			if ((user_input[1].equals(ops[0]) && user_input[3].equals(ops[2]))) {
 
 				q.addLast(user_input[0]);
@@ -241,7 +242,7 @@ public class Main {
 				}
 			}
 
-			// 初めの演算子が"-"の場合の処理
+			// 初めの演算子が-の場合の処理
 			// 初めの演算子が-, 次の演算子が*の場合の処理
 			if (user_input[1].equals(ops[1]) && user_input[3].equals(ops[2])) {
 
@@ -400,7 +401,7 @@ public class Main {
 
 	}
 
-	// 要素4以下の場合の処理
+	// 要素3以下の場合の処理
 	// 整数計算処理
 	public static int calcInteger(int input1, int input2, String[] user_input) {
 		if (user_input[1].equals("+")) {
@@ -444,7 +445,7 @@ public class Main {
 		return user_input;
 	}
 
-	// 要素5以上の場合の計算処理
+	// 要素4以上、、前から処理を行う場合の計算処理
 	public static int calc4(int input4, int middleAns, String[] user_input) {
 		if (user_input[3].equals("+")) {
 			return middleAns + input4;
