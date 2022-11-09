@@ -26,23 +26,24 @@ public class Main {
 				System.err.println("エラー");
 				continue;
 			}
-			// 演算子
+			//使用可能な演算子
 			String[] ops = { "+", "-", "*", "/", "%", "^", "r" };
 
-			// 計算処理
+			// 演算子が1つの場合の計算処理
 			if (!(user_input[1].equals(ops[6])) && user_input[3].equals("")) {
 				int calc;
 				int input1 = Integer.parseInt(user_input[0]);
 				int input2 = Integer.parseInt(user_input[2]);
 				int ans = calcInteger(input1, input2, user_input);
 				System.out.println(ans);
-			} else if (user_input[1].equals(ops[6]) && user_input[3].equals("")) {
+			} //rの場合の処理
+			else if (user_input[1].equals(ops[6]) && user_input[3].equals("")) {
 				double calc2;
 				double input3 = Double.parseDouble(user_input[0]);
 				double result = calc2(input3, user_input);
 				System.out.println(result);
 			}
-
+			//参照渡しにより、入力可能な値を増やす
 			else if (!(user_input[3].equals(""))) {
 				user_input = tempArray(user_input);
 			}
@@ -59,7 +60,7 @@ public class Main {
 			System.out.println("");
 			System.out.println("-----------------------------");
 
-			// 出力
+			// 戻り値を使用した場合の計算処理
 			int calcInteger;
 			int input1 = Integer.parseInt(user_input[0]);
 			int input2 = Integer.parseInt(user_input[2]);
@@ -68,19 +69,22 @@ public class Main {
 			int middleAns = calcInteger(input1, input2, user_input);
 			int finalAns = calc4(input4, middleAns, user_input);
 
+			//配列1が+,-ではない場合、前から処理を行う
 			if (user_input[1].equals(ops[2]) || user_input[1].equals(ops[3]) || user_input[1].equals(ops[4])
 					|| (user_input[1].equals(ops[5]) || (user_input[1].equals(ops[6])))) {
+				//出力
 				System.out.println(finalAns);
 			}
 
-			// 出力
+			// 演算子に優先順位をつけ、計算処理を行う
+			// +,- がarray[1]、×,÷,%,^,+,-がarray[3]にある場合、FILOで処理
 			int calc;
 			int ans;
 			int interAns;
 			Deque<String> q = new ArrayDeque<String>();
 
 			// String[] ops = { "+", "-", "*", "/", "%", "^", "r" };
-			// +,- がarray[1]、×,÷,%,^,+,-がarray[3]にある場合、FILOで処理
+			
 			// 初めの演算子が+、次の演算子が*の場合の処理
 			if ((user_input[1].equals(ops[0]) && user_input[3].equals(ops[2]))) {
 
