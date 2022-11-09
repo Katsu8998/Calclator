@@ -9,7 +9,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("値を入力してください");
 		System.out.println("演算子: +, -, x, ÷,%(除算・余り),^(べき乗),r(平方根)");
-		System.out.println("記号: =");
+
 		// 計算条件
 		while (true) {
 			// 2次元配列宣言
