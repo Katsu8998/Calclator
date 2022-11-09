@@ -1,8 +1,8 @@
 package Calculation;
 
-import java.util.Scanner;
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,7 +10,6 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("値を入力してください");
 		System.out.println("演算子: +, -, x, ÷,%(除算・余り),^(べき乗),r(平方根)");
-		System.out.println("記号: =");
 
 		while (true) {
 			// 条件設定
@@ -84,7 +83,7 @@ public class Main {
 			Deque<String> q = new ArrayDeque<String>();
 
 			// String[] ops = { "+", "-", "*", "/", "%", "^", "r" };
-			
+
 			//初めの演算子が+
 			//次の演算子が*の場合の処理
 			if ((user_input[1].equals(ops[0]) && user_input[3].equals(ops[2]))) {
