@@ -15,7 +15,7 @@
 
 
 ##### 注意点: 今回複数の1行電卓のソースコードファイルをアップロードしています。  
-##### ソースコードファイルの種類
+##### ソースコードファイル
 ##### 1 :  Calculation_Priority ;.java 
 ##### 2:  Calc_frontproceed_passbyreference;.java
 ##### 3:  Calc_front_multidimensional array;.java
