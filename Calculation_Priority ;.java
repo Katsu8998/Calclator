@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("値を入力してください");
-		System.out.println("演算子: +, -, x, ÷,%(除算・余り),^(べき乗),r(平方根)");
+		System.out.println("演算子: +, -, *, /,%(除算・余り),^(べき乗),r(平方根)");
 
 		while (true) {
 			// 条件設定
