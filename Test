@@ -1,1 +1,121 @@
 
+package Calculation;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("値を入力してください");
+		System.out.println("演算子: +, -, *, /,%(除算・余り),^(べき乗),r(平方根)");
+
+		while (true) {
+			// 条件設定
+			List<Integer>inputs = new ArrayList<>();
+			Scanner scanner = new Scanner(System.in);
+
+			for (int i = 0; i < 6; i++) {
+				int src = scanner.nextInt();
+				inputs.add(i, src);
+			}
+			// 空白の場合、処理を終了し、結果を表示
+			if(inputs.get(0)==null){
+				System.out.println("終了");
+				break;
+			} else if (inputs.get(1)==null) {
+				System.err.println("エラー");
+				continue;
+			}
+			// 演算子
+			char[] ops = { '+', '-', '*', '/', '%', '^', 'r' };
+
+					System.out.println("--------ここまでの入力-----------");
+				for (int i = 0; i < inputs.size(); i++) {
+					System.out.print(inputs.get(i));
+				}
+				System.out.println("");
+				System.out.println("-----------------------------");
+
+			// 計算処理
+			int calc;
+			int ans;
+			int interAns;
+			Deque<Integer> stack = new ArrayDeque<>();
+
+			// +,- がarray[1]、×,÷,%,^,+,-がarray[3]にある場合、FILOで処理
+			// 初めの演算子が+、次の演算子が*の場合の処理
+				stack.addLast(inputs.get(0));
+				stack.addLast(inputs.get(1));
+				stack.addLast(inputs.get(2));
+				stack.addLast(inputs.get(3));
+				stack.addLast(inputs.get(4));
+
+
+
+			continue;
+		}
+
+	}
+
+	// 要素4以下の場合の処理
+	// 整数計算処理
+	public static int calcInteger(int input1, int input2, String[] user_input) {
+		if (user_input[1].equals("+")) {
+			return input1 + input2;
+		}
+		if (user_input[1].equals("-")) {
+			return input1 - input2;
+		}
+		if (user_input[1].equals("*")) {
+			return input1 * input2;
+		}
+		if (user_input[1].equals("/")) {
+			return input1 / input2;
+		}
+
+		if (user_input[1].equals("%")) {
+			return input1 % input2;
+		}
+		if (user_input[1].equals("^")) {
+			return input1 ^ input2;
+		}
+		return 0;
+	}
+
+	// 平方根処理
+	public static double calc2(double input3, String[] user_input) {
+		if (user_input[1].equals("r")) {
+			double A = Math.sqrt(input3);
+			return A;
+		}
+		return 0.0;
+	}
+
+
+	// 要素5以上の場合の計算処理
+	public static int calc4(int input4, int middleAns, String[] user_input) {
+		if (user_input[3].equals("+")) {
+			return middleAns + input4;
+		}
+		if (user_input[3].equals("-")) {
+			return middleAns - input4;
+		}
+		if (user_input[3].equals("*")) {
+			return middleAns * input4;
+		}
+		if (user_input[1].equals("/")) {
+			return middleAns / input4;
+		}
+		if (user_input[3].equals("%")) {
+			return middleAns % input4;
+		}
+		if (user_input[3].equals("^")) {
+			return middleAns ^ input4;
+		}
+		return 0;
+	}
+}
